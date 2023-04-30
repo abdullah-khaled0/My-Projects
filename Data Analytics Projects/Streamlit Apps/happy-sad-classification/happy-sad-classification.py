@@ -1,6 +1,7 @@
 import streamlit as st
 import tensorflow as tf
 import numpy as np
+from PIL import Image
 
 
 # Define a function to load the model and cache it
