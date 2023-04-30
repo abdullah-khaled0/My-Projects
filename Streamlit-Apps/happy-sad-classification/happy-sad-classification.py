@@ -4,15 +4,7 @@ import numpy as np
 from PIL import Image
 
 
-# Define a function to load the model and cache it
-@st.cache_resource()
-def load_model():
-    # Load the pre-trained model
-    model = tf.keras.models.load_model('imageclassifier.h5')
-    return model
-
-# Load the model and cache it
-model = load_model()
+model = tf.keras.models.load_model('imageclassifier.h5')
 
 # Define the Streamlit app
 def app():
