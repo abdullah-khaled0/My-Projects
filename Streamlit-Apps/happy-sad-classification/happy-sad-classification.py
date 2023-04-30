@@ -8,7 +8,7 @@ from PIL import Image
 @st.cache_resource()
 def load_model():
     # Load the pre-trained model
-    model = tf.keras.models.load_model('imageclassifier.h5')
+    model = tf.keras.models.load_model('imageclassifier.h5', compile=False)
     return model
 
 # Load the model and cache it
