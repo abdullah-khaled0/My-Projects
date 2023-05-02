@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 
 
-model = tf.keras.models.load_model('imageclassifier.h5')
+model = tf.keras.models.load_model('Streamlit-Apps/happy-sad-classification/imageclassifier.h5')
 
 # Define the Streamlit app
 def app():
