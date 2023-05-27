@@ -15,7 +15,7 @@ movie_name = st.text_input("Enter Movie's name")
 @st.cache_resource
 def load_data():
     # Load the movies data from CSV
-    movies_data = pd.read_csv("movies.csv")
+    movies_data = pd.read_csv("https://github.com/abdullah-khaled0/My-Projects/blob/main/Streamlit-Apps/movie-recommendation-system/movies.csv")
 
     # Select the relevant features for recommendation
     selected_features = ['genres','keywords','tagline','cast','director']
