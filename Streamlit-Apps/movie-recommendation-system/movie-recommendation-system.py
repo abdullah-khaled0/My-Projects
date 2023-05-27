@@ -26,6 +26,7 @@ def load_data():
 
     # Combine all the selected features into one string
     combined_features = movies_data['genres']+' '+movies_data['keywords']+' '+movies_data['tagline']+' '+movies_data['cast']+' '+movies_data['director']
+    combined_features
 
     # Convert the text data to feature vectors
     vectorizer = TfidfVectorizer()
