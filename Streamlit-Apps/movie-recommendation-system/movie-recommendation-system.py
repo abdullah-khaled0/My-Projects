@@ -16,7 +16,7 @@ movie_name = st.text_input("Enter Movie's name")
 def load_data():
     # Load the movies data from CSV
     movies_data = pd.read_csv("https://github.com/abdullah-khaled0/My-Projects/blob/main/Streamlit-Apps/movie-recommendation-system/movies.csv", on_bad_lines='skip')
-
+    movies_data.columns
     # Select the relevant features for recommendation
     selected_features = ['genres','keywords','tagline','cast','director']
 
@@ -26,7 +26,6 @@ def load_data():
 
     # Combine all the selected features into one string
     combined_features = movies_data['genres']+' '+movies_data['keywords']+' '+movies_data['tagline']+' '+movies_data['cast']+' '+movies_data['director']
-    combined_features
 
     # Convert the text data to feature vectors
     vectorizer = TfidfVectorizer()
