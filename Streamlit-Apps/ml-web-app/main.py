@@ -4,7 +4,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-st.title('Data + ML + Streamlit + my intelligence🙃 = Power')
+st.title('Data + ML + Streamlit = Power')
 
 csv_file = st.file_uploader("Upload CSV", type=["csv"])
 
