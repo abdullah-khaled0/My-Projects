@@ -29,7 +29,7 @@ class IAssistant(metaclass=ABCMeta):
 
 class GenericAssistant(IAssistant):
 
-    def __init__(self, intents="Flask-Apps/chatbot/intents.json", intent_methods={}, model_name="chatbot_model"):
+    def __init__(self, intents, intent_methods={}, model_name="chatbot_model"):
         self.intents = intents
         self.intent_methods = intent_methods
         self.model_name = model_name
@@ -98,23 +98,23 @@ class GenericAssistant(IAssistant):
 
     def save_model(self, model_name=None):
         if model_name is None:
-            self.model.save(f"{self.model_name}.h5", self.hist)
-            pickle.dump(self.words, open(f'{self.model_name}_words.pkl', 'wb'))
-            pickle.dump(self.classes, open(f'{self.model_name}_classes.pkl', 'wb'))
+            self.model.save(f"Flask-Apps/chatbot/{self.model_name}.h5", self.hist)
+            pickle.dump(self.words, open(f'Flask-Apps/chatbot/{self.model_name}_words.pkl', 'wb'))
+            pickle.dump(self.classes, open(f'Flask-Apps/chatbot/{self.model_name}_classes.pkl', 'wb'))
         else:
-            self.model.save(f"{model_name}.h5", self.hist)
-            pickle.dump(self.words, open(f'{model_name}_words.pkl', 'wb'))
-            pickle.dump(self.classes, open(f'{model_name}_classes.pkl', 'wb'))
+            self.model.save(f"Flask-Apps/chatbot/{model_name}.h5", self.hist)
+            pickle.dump(self.words, open(f'Flask-Apps/chatbot/{model_name}_words.pkl', 'wb'))
+            pickle.dump(self.classes, open(f'Flask-Apps/chatbot/{model_name}_classes.pkl', 'wb'))
 
     def load_model(self, model_name=None):
         if model_name is None:
-            self.words = pickle.load(open(f'{self.model_name}_words.pkl', 'rb'))
-            self.classes = pickle.load(open(f'{self.model_name}_classes.pkl', 'rb'))
-            self.model = load_model(f'{self.model_name}.h5')
+            self.words = pickle.load(open(f'Flask-Apps/chatbot/{self.model_name}_words.pkl', 'rb'))
+            self.classes = pickle.load(open(f'Flask-Apps/chatbot/{self.model_name}_classes.pkl', 'rb'))
+            self.model = load_model(f'Flask-Apps/chatbot/{self.model_name}.h5')
         else:
-            self.words = pickle.load(open(f'{model_name}_words.pkl', 'rb'))
-            self.classes = pickle.load(open(f'{model_name}_classes.pkl', 'rb'))
-            self.model = load_model(f'{model_name}.h5')
+            self.words = pickle.load(open(f'Flask-Apps/chatbot/{model_name}_words.pkl', 'rb'))
+            self.classes = pickle.load(open(f'Flask-Apps/chatbot/{model_name}_classes.pkl', 'rb'))
+            self.model = load_model(f'Flask-Apps/chatbot/{model_name}.h5')
 
     def _clean_up_sentence(self, sentence):
         sentence_words = nltk.word_tokenize(sentence)
