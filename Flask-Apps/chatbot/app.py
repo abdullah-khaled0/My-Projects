@@ -39,5 +39,4 @@ def get_Chat_response(text):
     return bot_message
 
 
-if __name__ == '__main__':
-    app.run()
+app.run(debug=False)
