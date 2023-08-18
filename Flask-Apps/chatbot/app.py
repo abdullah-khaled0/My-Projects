@@ -2,9 +2,7 @@ from flask import Flask, render_template, request
 from assistant import GenericAssistant
 
 
-
-app = Flask()
-
+app = Flask(__name__)
 
 assistant = GenericAssistant('Flask-Apps/chatbot/intents.json', model_name="chatbot_model")
 # assistant.train_model()
@@ -39,4 +37,5 @@ def get_Chat_response(text):
     return bot_message
 
 
-app.run(debug=False)
+if __name__ == '__main__':
+    app.run(debug=False, host="0.0.0.0")
