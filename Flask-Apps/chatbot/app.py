@@ -3,7 +3,7 @@ from assistant import GenericAssistant
 
 
 
-app = Flask(__name__)
+app = Flask()
 
 
 assistant = GenericAssistant('Flask-Apps/chatbot/intents.json', model_name="chatbot_model")
