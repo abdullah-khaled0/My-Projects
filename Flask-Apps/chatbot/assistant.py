@@ -29,7 +29,7 @@ class IAssistant(metaclass=ABCMeta):
 
 class GenericAssistant(IAssistant):
 
-    def __init__(self, intents, intent_methods={}, model_name="chatbot_model"):
+    def __init__(self, intents="Flask-Apps/chatbot/intents.json", intent_methods={}, model_name="chatbot_model"):
         self.intents = intents
         self.intent_methods = intent_methods
         self.model_name = model_name
