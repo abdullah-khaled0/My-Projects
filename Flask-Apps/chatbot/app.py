@@ -6,7 +6,7 @@ from assistant import GenericAssistant
 app = Flask(__name__)
 
 
-assistant = GenericAssistant('intents.json', model_name="chatbot_model")
+assistant = GenericAssistant('Flask-Apps/chatbot/intents.json', model_name="chatbot_model")
 # assistant.train_model()
 # assistant.save_model()
 assistant.load_model()
