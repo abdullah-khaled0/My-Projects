@@ -236,15 +236,3 @@ border-radius: 0 0 15px 15px !important;
     color: #cccccc;
     text-align: center;
 }
-
-
-a:link { text-decoration: none; color: #cccccc;}
-
-
-a:visited { text-decoration: none; color: #cccccc;}
-
-
-a:hover { text-decoration: none; color: #078e98;}
-
-
-a:active { text-decoration: none; color: #cccccc;}
