@@ -10,9 +10,9 @@ import pickle
 @st.cache_data
 def load_data(csv_file):
     df_purchase = pd.read_csv(csv_file)
-    scaler = pickle.load(open('Streamlit-Apps\customer-analytics\scaler.pickle', 'rb'))
-    pca = pickle.load(open('Streamlit-Apps\customer-analytics\pca.pickle', 'rb'))
-    kmeans_pca = pickle.load(open('Streamlit-Apps\customer-analytics\kmeans_pca.pickle', 'rb'))
+    scaler = pickle.load(open('Streamlit-Apps/customer-analytics/scaler.pickle', 'rb'))
+    pca = pickle.load(open('Streamlit-Apps/customer-analytics/pca.pickle', 'rb'))
+    kmeans_pca = pickle.load(open('Streamlit-Apps/customer-analytics/kmeans_pca.pickle', 'rb'))
 
     features = df_purchase[['Sex', 'Marital status', 'Age', 'Education', 'Income', 'Occupation', 'Settlement size']]
     df_purchase_segm_std = scaler.transform(features)
