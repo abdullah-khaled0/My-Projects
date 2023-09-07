@@ -18,5 +18,5 @@ st.divider()
 if selected_btn == "Customer Segmentation":
     segmentation_inputs()
 elif selected_btn == "Purchase - Descriptive Analysis":
-    csv_file = "D:\My_Projects\Jupyter\Streamlit-Apps\customer-analytics\purchase_data.csv"
+    csv_file = "Streamlit-Apps/customer-analytics/purchase_data.csv"
     purch_descriptive_analysis(csv_file)
