@@ -5,9 +5,9 @@ import pickle
 
 @st.cache_data
 def load_scaler_pca_kmeans_pca():
-    scaler = pickle.load(open('Streamlit-Apps\customer-analytics\scaler.pickle', 'rb'))
-    pca = pickle.load(open('Streamlit-Apps\customer-analytics\pca.pickle', 'rb'))
-    kmeans_pca = pickle.load(open('Streamlit-Apps\customer-analytics\kmeans_pca.pickle', 'rb'))
+    scaler = pickle.load(open('Streamlit-Apps/customer-analytics/scaler.pickle', 'rb'))
+    pca = pickle.load(open('Streamlit-Apps/customer-analytics/pca.pickle', 'rb'))
+    kmeans_pca = pickle.load(open('Streamlit-Apps/customer-analytics/kmeans_pca.pickle', 'rb'))
 
     return scaler, pca, kmeans_pca
 
